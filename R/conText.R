@@ -179,7 +179,7 @@ conText <- function(formula, data, pre_trained, transform = TRUE, transform_matr
   if(jackknife){
     if(verbose) cat('starting jackknife \n')
     norm_tibble = cbind(norm_tibble,run_jackknife(norm_tibble$normed.estimate.deflated,
-                                                  X,Y,ids,confidence_level,verbose,parallel))
+                                                  X,Y,ids,confidence_level,verbose,parallel,jackknife_fraction))
     if(verbose) cat('done with jackknife \n')
   }
 
